@@ -28,7 +28,36 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <script>
+          
+          const listofcolors =['red','green','blue']
+          listofcolors.push('white')
+          listofcolors.unshift('black')
+
+          listofcolors.pop()
+          listofcolors.shift()
+
+          listofcolors[0]='white'
+
+          listofcolors.filter(color=>{
+            if(color==='green'){
+              const white=listofcolors.shift()
+              const blue=listofcolors.pop()
+              const green=listofcolors.pop()
+              listofcolors[0]=white
+              listofcolors[1]=blue
+              
+            }
+          })
+          listofcolors.map(color=>{
+            console.log(color)
+          })
+
+          console.log(listofcolors)
+          
+      </script>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
